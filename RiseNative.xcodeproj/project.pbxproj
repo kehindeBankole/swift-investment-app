@@ -7,18 +7,61 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		456B1F382B3CA2E0004DC523 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456B1F372B3CA2E0004DC523 /* OnboardingView.swift */; };
+		456B1F3A2B3CB490004DC523 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456B1F392B3CB490004DC523 /* LoginView.swift */; };
+		456B1F3C2B3CB8D5004DC523 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456B1F3B2B3CB8D5004DC523 /* SignupView.swift */; };
 		458C52D32B3BEACC0009393F /* RiseNativeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458C52D22B3BEACC0009393F /* RiseNativeApp.swift */; };
 		458C52D52B3BEACC0009393F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458C52D42B3BEACC0009393F /* ContentView.swift */; };
 		458C52D72B3BEACE0009393F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 458C52D62B3BEACE0009393F /* Assets.xcassets */; };
 		458C52DA2B3BEACE0009393F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 458C52D92B3BEACE0009393F /* Preview Assets.xcassets */; };
+		458C52E22B3BF1A60009393F /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458C52E12B3BF1A60009393F /* Color.swift */; };
+		458C52F42B3BF76C0009393F /* DMSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 458C52E52B3BF76C0009393F /* DMSans-BoldItalic.ttf */; };
+		458C52F52B3BF76C0009393F /* Gelion-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 458C52E62B3BF76C0009393F /* Gelion-Regular.ttf */; };
+		458C52F62B3BF76C0009393F /* DMSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 458C52E72B3BF76C0009393F /* DMSans-Bold.ttf */; };
+		458C52F72B3BF76C0009393F /* Gelion-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 458C52E82B3BF76C0009393F /* Gelion-Medium.ttf */; };
+		458C52F82B3BF76C0009393F /* DMSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 458C52E92B3BF76C0009393F /* DMSans-Italic.ttf */; };
+		458C52F92B3BF76C0009393F /* TomatoGrotesk-Regular-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 458C52EA2B3BF76C0009393F /* TomatoGrotesk-Regular-Italic.otf */; };
+		458C52FA2B3BF76C0009393F /* TomatoGrotesk-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 458C52EB2B3BF76C0009393F /* TomatoGrotesk-Regular.otf */; };
+		458C52FB2B3BF76C0009393F /* TomatoGrotesk-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 458C52EC2B3BF76C0009393F /* TomatoGrotesk-SemiBold.otf */; };
+		458C52FC2B3BF76C0009393F /* Gelion-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 458C52ED2B3BF76C0009393F /* Gelion-SemiBold.ttf */; };
+		458C52FD2B3BF76C0009393F /* Gelion-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 458C52EE2B3BF76C0009393F /* Gelion-Bold.ttf */; };
+		458C52FE2B3BF76C0009393F /* Gelion-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 458C52EF2B3BF76C0009393F /* Gelion-Light.ttf */; };
+		458C52FF2B3BF76C0009393F /* TomatoGrotesk-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 458C52F02B3BF76C0009393F /* TomatoGrotesk-Medium.otf */; };
+		458C53002B3BF76C0009393F /* DMSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 458C52F12B3BF76C0009393F /* DMSans-Regular.ttf */; };
+		458C53012B3BF76C0009393F /* DMSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 458C52F22B3BF76C0009393F /* DMSans-Medium.ttf */; };
+		458C53022B3BF76C0009393F /* DMSans-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 458C52F32B3BF76C0009393F /* DMSans-MediumItalic.ttf */; };
+		458C53052B3BF7980009393F /* CustomButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458C53042B3BF7980009393F /* CustomButtonStyle.swift */; };
+		458C531C2B3C12A10009393F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 458C531B2B3C12A10009393F /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		456B1F372B3CA2E0004DC523 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		456B1F392B3CB490004DC523 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		456B1F3B2B3CB8D5004DC523 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 		458C52CF2B3BEACC0009393F /* RiseNative.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RiseNative.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		458C52D22B3BEACC0009393F /* RiseNativeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiseNativeApp.swift; sourceTree = "<group>"; };
 		458C52D42B3BEACC0009393F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		458C52D62B3BEACE0009393F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		458C52D92B3BEACE0009393F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		458C52E12B3BF1A60009393F /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		458C52E52B3BF76C0009393F /* DMSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		458C52E62B3BF76C0009393F /* Gelion-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gelion-Regular.ttf"; sourceTree = "<group>"; };
+		458C52E72B3BF76C0009393F /* DMSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Bold.ttf"; sourceTree = "<group>"; };
+		458C52E82B3BF76C0009393F /* Gelion-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gelion-Medium.ttf"; sourceTree = "<group>"; };
+		458C52E92B3BF76C0009393F /* DMSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Italic.ttf"; sourceTree = "<group>"; };
+		458C52EA2B3BF76C0009393F /* TomatoGrotesk-Regular-Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TomatoGrotesk-Regular-Italic.otf"; sourceTree = "<group>"; };
+		458C52EB2B3BF76C0009393F /* TomatoGrotesk-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TomatoGrotesk-Regular.otf"; sourceTree = "<group>"; };
+		458C52EC2B3BF76C0009393F /* TomatoGrotesk-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TomatoGrotesk-SemiBold.otf"; sourceTree = "<group>"; };
+		458C52ED2B3BF76C0009393F /* Gelion-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gelion-SemiBold.ttf"; sourceTree = "<group>"; };
+		458C52EE2B3BF76C0009393F /* Gelion-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gelion-Bold.ttf"; sourceTree = "<group>"; };
+		458C52EF2B3BF76C0009393F /* Gelion-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gelion-Light.ttf"; sourceTree = "<group>"; };
+		458C52F02B3BF76C0009393F /* TomatoGrotesk-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TomatoGrotesk-Medium.otf"; sourceTree = "<group>"; };
+		458C52F12B3BF76C0009393F /* DMSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Regular.ttf"; sourceTree = "<group>"; };
+		458C52F22B3BF76C0009393F /* DMSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Medium.ttf"; sourceTree = "<group>"; };
+		458C52F32B3BF76C0009393F /* DMSans-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-MediumItalic.ttf"; sourceTree = "<group>"; };
+		458C53042B3BF7980009393F /* CustomButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonStyle.swift; sourceTree = "<group>"; };
+		458C53062B3BFC5F0009393F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		458C531B2B3C12A10009393F /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +75,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		456B1F3D2B3CCDF2004DC523 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				456B1F372B3CA2E0004DC523 /* OnboardingView.swift */,
+				456B1F392B3CB490004DC523 /* LoginView.swift */,
+				456B1F3B2B3CB8D5004DC523 /* SignupView.swift */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
 		458C52C62B3BEACC0009393F = {
 			isa = PBXGroup;
 			children = (
@@ -51,10 +104,15 @@
 		458C52D12B3BEACC0009393F /* RiseNative */ = {
 			isa = PBXGroup;
 			children = (
+				458C53062B3BFC5F0009393F /* Info.plist */,
+				458C53032B3BF7790009393F /* Fonts */,
+				458C52E02B3BF17A0009393F /* Design System */,
 				458C52D22B3BEACC0009393F /* RiseNativeApp.swift */,
 				458C52D42B3BEACC0009393F /* ContentView.swift */,
 				458C52D62B3BEACE0009393F /* Assets.xcassets */,
 				458C52D82B3BEACE0009393F /* Preview Content */,
+				458C531B2B3C12A10009393F /* LaunchScreen.storyboard */,
+				456B1F3D2B3CCDF2004DC523 /* Pages */,
 			);
 			path = RiseNative;
 			sourceTree = "<group>";
@@ -65,6 +123,37 @@
 				458C52D92B3BEACE0009393F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		458C52E02B3BF17A0009393F /* Design System */ = {
+			isa = PBXGroup;
+			children = (
+				458C52E12B3BF1A60009393F /* Color.swift */,
+				458C53042B3BF7980009393F /* CustomButtonStyle.swift */,
+			);
+			path = "Design System";
+			sourceTree = "<group>";
+		};
+		458C53032B3BF7790009393F /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				458C52E72B3BF76C0009393F /* DMSans-Bold.ttf */,
+				458C52E52B3BF76C0009393F /* DMSans-BoldItalic.ttf */,
+				458C52E92B3BF76C0009393F /* DMSans-Italic.ttf */,
+				458C52F22B3BF76C0009393F /* DMSans-Medium.ttf */,
+				458C52F32B3BF76C0009393F /* DMSans-MediumItalic.ttf */,
+				458C52F12B3BF76C0009393F /* DMSans-Regular.ttf */,
+				458C52EE2B3BF76C0009393F /* Gelion-Bold.ttf */,
+				458C52EF2B3BF76C0009393F /* Gelion-Light.ttf */,
+				458C52E82B3BF76C0009393F /* Gelion-Medium.ttf */,
+				458C52E62B3BF76C0009393F /* Gelion-Regular.ttf */,
+				458C52ED2B3BF76C0009393F /* Gelion-SemiBold.ttf */,
+				458C52F02B3BF76C0009393F /* TomatoGrotesk-Medium.otf */,
+				458C52EA2B3BF76C0009393F /* TomatoGrotesk-Regular-Italic.otf */,
+				458C52EB2B3BF76C0009393F /* TomatoGrotesk-Regular.otf */,
+				458C52EC2B3BF76C0009393F /* TomatoGrotesk-SemiBold.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,8 +214,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				458C53002B3BF76C0009393F /* DMSans-Regular.ttf in Resources */,
+				458C53012B3BF76C0009393F /* DMSans-Medium.ttf in Resources */,
+				458C52FA2B3BF76C0009393F /* TomatoGrotesk-Regular.otf in Resources */,
+				458C52F92B3BF76C0009393F /* TomatoGrotesk-Regular-Italic.otf in Resources */,
+				458C53022B3BF76C0009393F /* DMSans-MediumItalic.ttf in Resources */,
+				458C52FB2B3BF76C0009393F /* TomatoGrotesk-SemiBold.otf in Resources */,
 				458C52DA2B3BEACE0009393F /* Preview Assets.xcassets in Resources */,
+				458C52F62B3BF76C0009393F /* DMSans-Bold.ttf in Resources */,
+				458C52FC2B3BF76C0009393F /* Gelion-SemiBold.ttf in Resources */,
+				458C531C2B3C12A10009393F /* LaunchScreen.storyboard in Resources */,
+				458C52F82B3BF76C0009393F /* DMSans-Italic.ttf in Resources */,
 				458C52D72B3BEACE0009393F /* Assets.xcassets in Resources */,
+				458C52FE2B3BF76C0009393F /* Gelion-Light.ttf in Resources */,
+				458C52F72B3BF76C0009393F /* Gelion-Medium.ttf in Resources */,
+				458C52F42B3BF76C0009393F /* DMSans-BoldItalic.ttf in Resources */,
+				458C52F52B3BF76C0009393F /* Gelion-Regular.ttf in Resources */,
+				458C52FF2B3BF76C0009393F /* TomatoGrotesk-Medium.otf in Resources */,
+				458C52FD2B3BF76C0009393F /* Gelion-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +242,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				456B1F3C2B3CB8D5004DC523 /* SignupView.swift in Sources */,
+				456B1F3A2B3CB490004DC523 /* LoginView.swift in Sources */,
 				458C52D52B3BEACC0009393F /* ContentView.swift in Sources */,
+				458C53052B3BF7980009393F /* CustomButtonStyle.swift in Sources */,
 				458C52D32B3BEACC0009393F /* RiseNativeApp.swift in Sources */,
+				456B1F382B3CA2E0004DC523 /* OnboardingView.swift in Sources */,
+				458C52E22B3BF1A60009393F /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,9 +385,11 @@
 				DEVELOPMENT_TEAM = 57PCP37963;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RiseNative/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -304,9 +416,11 @@
 				DEVELOPMENT_TEAM = 57PCP37963;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RiseNative/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
