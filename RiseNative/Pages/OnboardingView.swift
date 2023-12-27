@@ -35,9 +35,12 @@ struct OnboardingView: View {
                             content:  {
                         ForEach(onboardContent, id:\.self, content: { item in
                             VStack(){
-                                VStack(alignment: .leading , spacing: 8){
-                                    Text(item.title).font(.custom("TomatoGrotesk-Medium", size: 24))
-                                    Text(item.subtitle).font(.custom("TomatoGrotesk-Regular", size: 15))
+                                HStack{
+                                    VStack(alignment: .leading , spacing: 8){
+                                        Text(item.title).font(.custom("TomatoGrotesk-Medium", size: 24))
+                                        Text(item.subtitle).font(.custom("TomatoGrotesk-Regular", size: 15))
+                                    }
+                                    Spacer()
                                 }
                                 Spacer()
                             }.tag(item)
