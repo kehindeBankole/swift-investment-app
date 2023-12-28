@@ -5,6 +5,7 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>DMSans-Bold.ttf</string>
+		<string>DMSans-Regular.ttf</string>
 		<string>TomatoGrotesk-SemiBold.otf</string>
 		<string>TomatoGrotesk-Medium.otf</string>
 		<string>TomatoGrotesk-Regular.otf</string>

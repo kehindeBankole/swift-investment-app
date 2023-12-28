@@ -15,6 +15,7 @@ struct OnboardingData : Hashable {
 let onboardContent = [OnboardingData(title: "Investments that help you grow", subtitle: "Personalized investment plans handpicked by experts to beat inflation and grow your wealth.") , OnboardingData(title: "Diversified Portfolio", subtitle: "Spread your investments across multiple asset classes.") , OnboardingData(title: "Managed For You", subtitle: "Get quality investment management, hassle free, handled for you.") , OnboardingData(title: "Get Additional Benefits", subtitle: "Dedicated multi-currency bank accounts, virtual cards, interest paying wallets and lots more.")]
 
 struct OnboardingView: View {
+    @AppStorage("isNewUser") var isNewUser: Bool = true
     @State var currentView = onboardContent[0]
     //using index for smooth animation purpose
     @State private var currentIndex = 0
@@ -59,7 +60,10 @@ struct OnboardingView: View {
                         
                       
                             NavigationLink(destination: LoginView(), label: {
-                                Text("Sign in").font(.custom("DMSans-Bold", size: 15)).foregroundStyle(Color.riseTeal).padding().padding(.horizontal, 20).background(Capsule().fill(Color.white).cornerRadius(40).shadow(radius: 3))                 })
+                                Text("Sign in").font(.custom("DMSans-Bold", size: 15)).foregroundStyle(Color.riseTeal).padding().padding(.horizontal, 20).background(Capsule().fill(Color.white.opacity(0.3)).cornerRadius(40).shadow(color: Color(red: 0.03, green: 0.6, blue: 0.63).opacity(0.25), radius: 8, x: 0, y: 0))                }).simultaneousGesture(TapGesture().onEnded {
+                                   isNewUser = false
+
+                                })
                        
                         Spacer()
                         

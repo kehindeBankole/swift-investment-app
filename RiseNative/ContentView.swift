@@ -8,11 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
-
+    @AppStorage("isNewUser") var isNewUser = true
     var body: some View {
         VStack {
-            OnboardingView().preferredColorScheme(.light)
-        }
+ 
+            if(isNewUser == true){
+                OnboardingView()
+            }else{
+                LoginView()
+            }
+        }.preferredColorScheme(.light)
    
     }
 }
