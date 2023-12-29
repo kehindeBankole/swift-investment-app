@@ -9,16 +9,21 @@ import SwiftUI
 
 struct ContentView: View {
     @AppStorage("isNewUser") var isNewUser = true
+    var appData = ApiData()
+    
     var body: some View {
-        VStack {
- 
-            if(isNewUser == true){
-                OnboardingView()
-            }else{
-                LoginView()
-            }
-        }.preferredColorScheme(.light)
-   
+            VStack {
+              
+                if(isNewUser == true){
+                    OnboardingView()
+                }else{
+                    if(appData.isAuthenticated == false){
+                        LoginView()
+                    }else{
+                        LayoutView()
+                    }
+                }
+            }.preferredColorScheme(.light)
     }
 }
 

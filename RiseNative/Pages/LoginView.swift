@@ -31,23 +31,28 @@ struct LoginView: View {
     @State private var isErrorLogginIn = false
     @State var errorMessage:String = ""
     @State var shouldLogin  = false
+    @AppStorage("token") var token: String = ""
+    var appData = ApiData()
+    
     
     func login() async {
         do{
             isLogginIn = true
             errorMessage = ""
-            let data : LoginRes? = try await makeApiCall(endpoint: baseUrl + "/v2/auth/login", method: .post , body: ["email" : email , "password" : password])
+            let data : LoginRes? = try await makeApiCall(endpoint: baseUrl + "/auth/login", method: .post , body: ["email" : email , "password" : password])
             
             
             if((data?.message) != nil){
                 shouldLogin = false
                 errorMessage = data!.message!
-                print(data!.message!)
                 DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
                     errorMessage = ""
                 }
             }else{
                 shouldLogin = true
+                token =  data!.token!
+                appData.isAuthenticated = true
+         
             }
             isLogginIn = false
         }catch{

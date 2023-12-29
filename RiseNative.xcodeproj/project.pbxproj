@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		4534EF882B3F27F000FE1DDC /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4534EF872B3F27F000FE1DDC /* constants.swift */; };
+		4534EF8A2B3F50E300FE1DDC /* CustomTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4534EF892B3F50E300FE1DDC /* CustomTab.swift */; };
+		4534EF8C2B3F514400FE1DDC /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4534EF8B2B3F514400FE1DDC /* Home.swift */; };
+		4534EF8E2B3F6D0600FE1DDC /* PlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4534EF8D2B3F6D0600FE1DDC /* PlanView.swift */; };
+		4534EF902B3F6D1B00FE1DDC /* WalletView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4534EF8F2B3F6D1B00FE1DDC /* WalletView.swift */; };
+		4534EF922B3F6D2600FE1DDC /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4534EF912B3F6D2600FE1DDC /* FeedView.swift */; };
+		4534EF942B3F6D3300FE1DDC /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4534EF932B3F6D3300FE1DDC /* AccountView.swift */; };
+		4534EF982B3F858B00FE1DDC /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4534EF972B3F858B00FE1DDC /* Data.swift */; };
 		456B1F382B3CA2E0004DC523 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456B1F372B3CA2E0004DC523 /* OnboardingView.swift */; };
 		456B1F3A2B3CB490004DC523 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456B1F392B3CB490004DC523 /* LoginView.swift */; };
 		456B1F3C2B3CB8D5004DC523 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456B1F3B2B3CB8D5004DC523 /* SignupView.swift */; };
@@ -39,6 +46,13 @@
 
 /* Begin PBXFileReference section */
 		4534EF872B3F27F000FE1DDC /* constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
+		4534EF892B3F50E300FE1DDC /* CustomTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTab.swift; sourceTree = "<group>"; };
+		4534EF8B2B3F514400FE1DDC /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		4534EF8D2B3F6D0600FE1DDC /* PlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanView.swift; sourceTree = "<group>"; };
+		4534EF8F2B3F6D1B00FE1DDC /* WalletView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletView.swift; sourceTree = "<group>"; };
+		4534EF912B3F6D2600FE1DDC /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
+		4534EF932B3F6D3300FE1DDC /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		4534EF972B3F858B00FE1DDC /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		456B1F372B3CA2E0004DC523 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		456B1F392B3CB490004DC523 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		456B1F3B2B3CB8D5004DC523 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
@@ -81,6 +95,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4534EF952B3F844800FE1DDC /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				45D4EDD12B3EB21500E098AA /* Api.swift */,
+				4534EF872B3F27F000FE1DDC /* constants.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		4534EF962B3F845600FE1DDC /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				4534EF892B3F50E300FE1DDC /* CustomTab.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		456B1F3D2B3CCDF2004DC523 /* Pages */ = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +119,11 @@
 				456B1F392B3CB490004DC523 /* LoginView.swift */,
 				456B1F3B2B3CB8D5004DC523 /* SignupView.swift */,
 				45D4EDD32B3EFD8E00E098AA /* LayoutView.swift */,
+				4534EF8B2B3F514400FE1DDC /* Home.swift */,
+				4534EF8D2B3F6D0600FE1DDC /* PlanView.swift */,
+				4534EF8F2B3F6D1B00FE1DDC /* WalletView.swift */,
+				4534EF912B3F6D2600FE1DDC /* FeedView.swift */,
+				4534EF932B3F6D3300FE1DDC /* AccountView.swift */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -111,6 +147,7 @@
 		458C52D12B3BEACC0009393F /* RiseNative */ = {
 			isa = PBXGroup;
 			children = (
+				4534EF972B3F858B00FE1DDC /* Data.swift */,
 				458C53062B3BFC5F0009393F /* Info.plist */,
 				458C53032B3BF7790009393F /* Fonts */,
 				458C52E02B3BF17A0009393F /* Design System */,
@@ -120,8 +157,8 @@
 				458C52D82B3BEACE0009393F /* Preview Content */,
 				458C531B2B3C12A10009393F /* LaunchScreen.storyboard */,
 				456B1F3D2B3CCDF2004DC523 /* Pages */,
-				45D4EDD12B3EB21500E098AA /* Api.swift */,
-				4534EF872B3F27F000FE1DDC /* constants.swift */,
+				4534EF952B3F844800FE1DDC /* Utils */,
+				4534EF962B3F845600FE1DDC /* Components */,
 			);
 			path = RiseNative;
 			sourceTree = "<group>";
@@ -254,12 +291,19 @@
 				456B1F3C2B3CB8D5004DC523 /* SignupView.swift in Sources */,
 				456B1F3A2B3CB490004DC523 /* LoginView.swift in Sources */,
 				45D4EDD42B3EFD8E00E098AA /* LayoutView.swift in Sources */,
+				4534EF902B3F6D1B00FE1DDC /* WalletView.swift in Sources */,
+				4534EF942B3F6D3300FE1DDC /* AccountView.swift in Sources */,
+				4534EF8E2B3F6D0600FE1DDC /* PlanView.swift in Sources */,
 				4534EF882B3F27F000FE1DDC /* constants.swift in Sources */,
 				458C52D52B3BEACC0009393F /* ContentView.swift in Sources */,
+				4534EF8A2B3F50E300FE1DDC /* CustomTab.swift in Sources */,
 				458C53052B3BF7980009393F /* CustomButtonStyle.swift in Sources */,
 				458C52D32B3BEACC0009393F /* RiseNativeApp.swift in Sources */,
+				4534EF922B3F6D2600FE1DDC /* FeedView.swift in Sources */,
 				456B1F382B3CA2E0004DC523 /* OnboardingView.swift in Sources */,
+				4534EF982B3F858B00FE1DDC /* Data.swift in Sources */,
 				45D4EDD22B3EB21500E098AA /* Api.swift in Sources */,
+				4534EF8C2B3F514400FE1DDC /* Home.swift in Sources */,
 				458C52E22B3BF1A60009393F /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
