@@ -9,7 +9,9 @@ import SwiftUI
 
 struct LayoutView: View {
     @State private var currentTab = Tabs.home
-    
+    init(){
+        UITabBar.appearance().isHidden = true
+    }
     var body: some View {
         VStack{
             TabView(selection: $currentTab,
