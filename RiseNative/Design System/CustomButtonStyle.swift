@@ -12,7 +12,8 @@ enum ButtonType{
 }
 struct CustomButtonStyle: ButtonStyle {
     @Binding var type:ButtonType
-    
+    @Environment(\.isEnabled) private var isEnabled
+
     func makeBody(configuration : Configuration) -> some View {
         configuration.label
             .frame(maxWidth: .infinity , maxHeight: 54)
@@ -20,6 +21,8 @@ struct CustomButtonStyle: ButtonStyle {
                 .cornerRadius(5))
             .foregroundStyle(type == .primary ? Color.white : Color.riseTeal)
             .font(.custom("DMSans-Bold", size: 15))
+            .scaleEffect(configuration.isPressed ? 0.95 : 1)
+            .opacity(isEnabled ? 1 : 0.5)
     }
 }
 
