@@ -7,15 +7,6 @@
 
 import SwiftUI
 
-struct Profile : Decodable{
-    let id : Int?
-    let uuid : String?
-    let profilePicUrl : String?
-    let message : String?
-}
-
-
-
 enum Tabs : String , CaseIterable  {
     case home = "Home"
     case plans = "Plans"
@@ -35,7 +26,6 @@ struct CustomTab: View {
     
     var body: some View {
         Divider()
-        
         HStack(alignment: .center){
             ForEach(Tabs.allCases , id:\.rawValue ,  content: {item in
                 let isCurrentTab = item.rawValue == currentTab.rawValue
@@ -71,9 +61,7 @@ struct CustomTab: View {
                 if let pictureUrl = data!.profilePicUrl {
                     profilePicUrl = pictureUrl
                 }
-                print("pic" , profilePicUrl)
-                
-                
+            
             }catch {
                 print(error)
             }
@@ -82,6 +70,5 @@ struct CustomTab: View {
 }
 
 #Preview {
-    
     CustomTab(currentTab: .constant(.home))
 }

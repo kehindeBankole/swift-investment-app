@@ -14,4 +14,7 @@ extension Color{
     static let riseTextNeutral = Color("TextNeutral")
     static let riseTextSoft = Color("TextSoft")
     static let riseIconColor = Color("IconColor")
+    static let riseActiveCard = Color("ActiveCardColor")
+    static let riseText600 = Color("Text600")
+    static let riseText300 = Color("Text300")
 }

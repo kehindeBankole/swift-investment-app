@@ -7,19 +7,6 @@
 
 import SwiftUI
 
-
-struct PostRequestData: Encodable {
-    let email: String
-    let password :String
-    
-}
-
-struct LoginRes : Decodable {
-    let token : String?
-    let message : String?
-}
-
-
 struct LoginView: View {
     @State private var email = ""
     @State var showPassword = false
@@ -83,7 +70,7 @@ struct LoginView: View {
                         Text(errorMessage).font(.custom("DMSans-Medium", size: 14)).foregroundStyle(.white)
                         
                     }.offset(y: errorMessage == "" ? 10 : 0).opacity(errorMessage == "" ? 0 : 1)
-                ).animation(.default, value: errorMessage)
+                ).animation(.default, value: errorMessage != "")
                 
                 
                 VStack(spacing: 17){
@@ -93,10 +80,9 @@ struct LoginView: View {
                         
                         ZStack(alignment: .leading){
                             
-                            
                             HStack{
                                 Text("Email address").padding(.horizontal , 10)
-                            }.background(.white).offset(y: emailFieldIsFocused == false && email == "" ? 0 : -25).animation(.default, value: emailFieldIsFocused)
+                            }.background(.white).offset(y: emailFieldIsFocused == false && email == "" ? 0 : -25).animation(.default, value: emailFieldIsFocused == true)
                             
                             
                             TextField("", text: $email).focused($emailFieldIsFocused).textInputAutocapitalization(.never)
@@ -114,7 +100,7 @@ struct LoginView: View {
                             
                             HStack{
                                 Text("Password").padding(.horizontal , 10)
-                            }.background(.white).offset(y: passFieldIsFocused == false && password == "" ? 0 : -25).animation(.default, value: passFieldIsFocused)
+                            }.background(.white).offset(y: passFieldIsFocused == false && password == "" ? 0 : -25).animation(.default, value: passFieldIsFocused == true)
                             if(showPassword){
                                 TextField("", text: $password).focused($passFieldIsFocused).textInputAutocapitalization(.never)
                             }else{

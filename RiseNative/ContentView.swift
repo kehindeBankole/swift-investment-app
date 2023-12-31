@@ -16,12 +16,8 @@ struct ContentView: View {
               
                 if(isNewUser == true){
                     OnboardingView()
-                }else{
-                    if(appData.isAuthenticated == false){
+                }else{         
                         LoginView()
-                    }else{
-                        LayoutView()
-                    }
                 }
             }.preferredColorScheme(.light)
     }
