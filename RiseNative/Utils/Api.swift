@@ -43,7 +43,7 @@ func makeApiCall<T>(endpoint: String, method: HTTPMethod, body: [String: Any]? =
         
         do{
             let decodedData = try JSONDecoder().decode(T.self, from: data)
-            print("response", token , response,  decodedData )
+          //  print("response", token , response,  decodedData )
             return decodedData
         } catch {
             

@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct LoginView: View {
-    @State private var email = ""
+    @State private var email = "bankolek1@gmail.com"
     @State var showPassword = false
-    @State private var password = ""
+    @State private var password = "Ayinke2013#"
     @State private var primaryButton:ButtonType = .primary
     @FocusState private var passFieldIsFocused: Bool
     @FocusState private var emailFieldIsFocused: Bool
@@ -19,8 +19,7 @@ struct LoginView: View {
     @State var errorMessage:String = ""
     @State var shouldLogin  = false
     @AppStorage("token") var token: String = ""
-    var appData = ApiData()
-    
+    @Environment(ApiData.self) private var appData
     
     func login() async {
         do{
@@ -39,7 +38,8 @@ struct LoginView: View {
                 shouldLogin = true
                 token =  data!.token!
                 appData.isAuthenticated = true
-         
+                appData.path.append("layout")
+                print(appData.path)
             }
             isLogginIn = false
         }catch{
@@ -50,7 +50,7 @@ struct LoginView: View {
     
     var body: some View {
         
-        NavigationStack{
+        NavigationStack(path:Bindable(appData).path){
             VStack(alignment: .leading){
                 
                 HStack{
@@ -145,12 +145,12 @@ struct LoginView: View {
                         Text("I forgot my password").foregroundStyle(Color.riseTeal).font(.custom("DMSans-Bold", size: 15))
                     }).padding(.top , 20)
                 }.padding(.top , 40)
-                
-                
                 Spacer()
-            }.navigationDestination(isPresented: $shouldLogin, destination:{
+            }.navigationDestination(for:String.self){_ in
                 LayoutView()
-            }).padding().padding(.top , 40)
+            }.navigationDestination(for:CampaignModel.self){data in
+              CampaignImageView(campaign: data)
+            }.padding().padding(.top , 40)
             
         }
         

@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct RiseNativeApp: App {
+    @State private var appData = ApiData()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().environment(appData)
         }
     }
 }

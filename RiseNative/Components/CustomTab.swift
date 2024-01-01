@@ -15,11 +15,6 @@ enum Tabs : String , CaseIterable  {
     case more = "More"
 }
 
-extension Image {
-    func ImageModifier() -> some View{
-        self.resizable().scaledToFit()
-    }
-}
 struct CustomTab: View {
     @Binding var currentTab:Tabs
     @State private var profilePicUrl = ""

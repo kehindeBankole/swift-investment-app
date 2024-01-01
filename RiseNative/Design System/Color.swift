@@ -17,4 +17,5 @@ extension Color{
     static let riseActiveCard = Color("ActiveCardColor")
     static let riseText600 = Color("Text600")
     static let riseText300 = Color("Text300")
+    static let riseCampaignImageColor = Color("ImageCampaignColor")
 }
