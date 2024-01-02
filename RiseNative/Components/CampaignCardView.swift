@@ -98,7 +98,7 @@ struct CampaignCardView: View {
                 HStack{
                     ForEach( 0 ..< (campaigns.count + 2) , id:\.self){index  in
                         let isActive = index == currentView-1
-                        Rectangle().fill(isActive ? Color.riseActiveCard : Color.textSoft).opacity(isActive ? 1 : 0.2).frame(width: index == currentView-1 ? 12 : 5 , height: 5).cornerRadius(20)
+                        Rectangle().fill(isActive ? Color.riseActiveCard : Color.textSoft).opacity(isActive ? 1 : 0.2).frame(width: index == currentView-1 ? 12 : 5 , height: 5).cornerRadius(20).animation(.default, value: isActive)
                     }
                 }
             }.task {

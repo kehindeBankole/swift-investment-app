@@ -27,6 +27,9 @@ struct Home: View {
             VStack{
                 CampaignCardView()
             }.frame(height: 192)
+            VStack{
+                BalanceCardView()
+            }.frame(height: 220)
             Spacer()
         }.padding()
     }

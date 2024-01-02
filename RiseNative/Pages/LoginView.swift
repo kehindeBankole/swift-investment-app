@@ -146,8 +146,10 @@ struct LoginView: View {
                     }).padding(.top , 20)
                 }.padding(.top , 40)
                 Spacer()
-            }.navigationDestination(for:String.self){_ in
-                LayoutView()
+            }.navigationDestination(for:String.self){data in
+                if(data=="layout"){
+                    LayoutView()
+                }
             }.navigationDestination(for:CampaignModel.self){data in
               CampaignImageView(campaign: data)
             }.padding().padding(.top , 40)
