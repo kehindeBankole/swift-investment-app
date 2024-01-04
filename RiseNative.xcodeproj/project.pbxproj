@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4524288A2B4483BA00CC4381 /* BalanceCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452428892B4483BA00CC4381 /* BalanceCardView.swift */; };
-		4534EF882B3F27F000FE1DDC /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4534EF872B3F27F000FE1DDC /* constants.swift */; };
 		4534EF8A2B3F50E300FE1DDC /* CustomTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4534EF892B3F50E300FE1DDC /* CustomTab.swift */; };
 		4534EF8C2B3F514400FE1DDC /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4534EF8B2B3F514400FE1DDC /* Home.swift */; };
 		4534EF8E2B3F6D0600FE1DDC /* PlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4534EF8D2B3F6D0600FE1DDC /* PlanView.swift */; };
@@ -53,7 +52,6 @@
 
 /* Begin PBXFileReference section */
 		452428892B4483BA00CC4381 /* BalanceCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceCardView.swift; sourceTree = "<group>"; };
-		4534EF872B3F27F000FE1DDC /* constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
 		4534EF892B3F50E300FE1DDC /* CustomTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTab.swift; sourceTree = "<group>"; };
 		4534EF8B2B3F514400FE1DDC /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		4534EF8D2B3F6D0600FE1DDC /* PlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanView.swift; sourceTree = "<group>"; };
@@ -113,7 +111,6 @@
 			isa = PBXGroup;
 			children = (
 				45D4EDD12B3EB21500E098AA /* Api.swift */,
-				4534EF872B3F27F000FE1DDC /* constants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -328,7 +325,6 @@
 				4534EF942B3F6D3300FE1DDC /* AccountView.swift in Sources */,
 				45E5FEA22B41867500A2BB99 /* CampaignCardView.swift in Sources */,
 				4534EF8E2B3F6D0600FE1DDC /* PlanView.swift in Sources */,
-				4534EF882B3F27F000FE1DDC /* constants.swift in Sources */,
 				458C52D52B3BEACC0009393F /* ContentView.swift in Sources */,
 				4534EF8A2B3F50E300FE1DDC /* CustomTab.swift in Sources */,
 				458C53052B3BF7980009393F /* CustomButtonStyle.swift in Sources */,
