@@ -16,7 +16,7 @@ struct LayoutView: View {
         VStack{
             TabView(selection: $currentTab,
                     content:  {
-                Home().tag(Tabs.home)
+                Home(currentTab: $currentTab).tag(Tabs.home)
                 PlanView().tag(Tabs.plans)
                 WalletView().tag(Tabs.wallet)
                 FeedView().tag(Tabs.feed)

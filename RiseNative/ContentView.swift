@@ -9,7 +9,6 @@ import SwiftUI
 
 struct ContentView: View {
     @AppStorage("isNewUser") var isNewUser = true
-    var appData = ApiData()
     
     var body: some View {
             VStack {

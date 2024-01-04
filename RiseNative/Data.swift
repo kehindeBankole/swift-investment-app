@@ -9,7 +9,9 @@ import Foundation
 import SwiftUI
 
 
-@Observable class ApiData{
+@Observable class AppData{
     var isAuthenticated:Bool = false
     var path = NavigationPath()
+    
+    
 }

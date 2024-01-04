@@ -19,7 +19,7 @@ struct LoginView: View {
     @State var errorMessage:String = ""
     @State var shouldLogin  = false
     @AppStorage("token") var token: String = ""
-    @Environment(ApiData.self) private var appData
+    @Environment(AppData.self) private var appData
     
     func login() async {
         do{

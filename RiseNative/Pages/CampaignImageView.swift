@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CampaignImageView: View {
     @State var campaign : CampaignModel
-    @Environment(ApiData.self) private var appData
+    @Environment(AppData.self) private var appData
     
     var body: some View {
         VStack{
