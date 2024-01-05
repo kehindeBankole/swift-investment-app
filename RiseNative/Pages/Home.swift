@@ -18,7 +18,7 @@ enum Time {
 
 
 struct Home: View {
-
+    @Environment(AppData.self) private var appData
     @State var timeOfDay : Time = .morning
     @Binding var currentTab:Tabs
     func getTimeOfDay() {
@@ -42,7 +42,7 @@ struct Home: View {
                 HStack{
                     VStack(alignment: .leading , spacing: 5){
                         Text("Good \(timeOfDay == .morning ? "Morning 🌦️": timeOfDay == .afternoon ? "Afternoon ☀️" : "Evening 🌃")").font(.custom("DMSans-Regular", size: 15))
-                        Text("Deborah").font(.custom("DMSans-Regular", size: 20))
+                        Text("\(appData.profile?.firstName ?? "")").font(.custom("DMSans-Regular", size: 20))
                     }
                     Spacer()
                     ZStack{

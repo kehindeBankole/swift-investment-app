@@ -12,4 +12,5 @@ struct Profile : Decodable{
     let uuid : String?
     let profilePicUrl : String?
     let message : String?
+    let firstName:String
 }

@@ -17,7 +17,7 @@ enum Tabs : String , CaseIterable  {
 
 struct CustomTab: View {
     @Binding var currentTab:Tabs
-    @State private var profilePicUrl = ""
+    @Environment(AppData.self) private var appData
     
     var body: some View {
         Divider()
@@ -32,11 +32,11 @@ struct CustomTab: View {
                         if(item != .more){
                             Image(item.rawValue).resizable().renderingMode(.template).foregroundStyle(isCurrentTab == true ? .black : Color.riseIconColor).scaledToFit().frame(width: 40 , height:40)
                         }else{
-                            AsyncImage(url: URL(string: profilePicUrl), content: { image in
+                            AsyncImage(url: URL(string: appData.profile?.profilePicUrl ?? "sjd"), content: { image in
                                 image.ImageModifier().frame(width: 40 , height:40).cornerRadius(100)
                             }, placeholder: {
                                 Image(systemName: "person.circle").ImageModifier().frame(width: 40 , height:40).foregroundStyle(Color.riseIconColor)
-                            }).id(profilePicUrl)
+                            }).id(appData.profile?.profilePicUrl ?? "sd")
                         }
                         if(isCurrentTab == true){
                             Circle().fill(.black).frame(width: 7 , height: 7)
@@ -47,18 +47,27 @@ struct CustomTab: View {
                         
                     }
                     Spacer()
-                })
+                }).disabled(isCurrentTab)
                 
             })
         }.padding(.horizontal , 20).task(priority: .high) {
+            
             do{
+                
                 let data : Profile? =   try await makeApiCall(endpoint: baseUrl + "/auth/profile", method: .get)
-                if let pictureUrl = data!.profilePicUrl {
-                    profilePicUrl = pictureUrl
+        
+                if let profile = data {
+                    appData.profile = profile
                 }
             
             }catch {
-                print(error)
+                switch(error){
+                case MyError.UnAuthorized:
+                    appData.path.append("layout")
+                    print(appData.path)
+                default:
+                    print("ks")
+                }
             }
         }
     }

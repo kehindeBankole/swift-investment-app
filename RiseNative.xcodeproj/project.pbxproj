@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		450FB6AF2B46D6C90071F76A /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450FB6AE2B46D6C90071F76A /* constants.swift */; };
+		450FB6B12B4828160071F76A /* WalletModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450FB6B02B4828160071F76A /* WalletModel.swift */; };
+		450FB6B32B4832AB0071F76A /* StatsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450FB6B22B4832AB0071F76A /* StatsModel.swift */; };
+		450FB6B52B4896B40071F76A /* SkeletonLoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450FB6B42B4896B40071F76A /* SkeletonLoaderView.swift */; };
 		4524288A2B4483BA00CC4381 /* BalanceCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452428892B4483BA00CC4381 /* BalanceCardView.swift */; };
 		4534EF8A2B3F50E300FE1DDC /* CustomTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4534EF892B3F50E300FE1DDC /* CustomTab.swift */; };
 		4534EF8C2B3F514400FE1DDC /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4534EF8B2B3F514400FE1DDC /* Home.swift */; };
@@ -51,6 +55,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		450FB6AE2B46D6C90071F76A /* constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
+		450FB6B02B4828160071F76A /* WalletModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletModel.swift; sourceTree = "<group>"; };
+		450FB6B22B4832AB0071F76A /* StatsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsModel.swift; sourceTree = "<group>"; };
+		450FB6B42B4896B40071F76A /* SkeletonLoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonLoaderView.swift; sourceTree = "<group>"; };
 		452428892B4483BA00CC4381 /* BalanceCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceCardView.swift; sourceTree = "<group>"; };
 		4534EF892B3F50E300FE1DDC /* CustomTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTab.swift; sourceTree = "<group>"; };
 		4534EF8B2B3F514400FE1DDC /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
@@ -110,6 +118,7 @@
 		4534EF952B3F844800FE1DDC /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				450FB6AE2B46D6C90071F76A /* constants.swift */,
 				45D4EDD12B3EB21500E098AA /* Api.swift */,
 			);
 			path = Utils;
@@ -121,6 +130,7 @@
 				4534EF892B3F50E300FE1DDC /* CustomTab.swift */,
 				45E5FEA12B41867500A2BB99 /* CampaignCardView.swift */,
 				452428892B4483BA00CC4381 /* BalanceCardView.swift */,
+				450FB6B42B4896B40071F76A /* SkeletonLoaderView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -224,6 +234,8 @@
 				45BE5A492B4094BF00EB3457 /* ProfileModel.swift */,
 				45BE5A472B40948D00EB3457 /* AuthModel.swift */,
 				45E5FEA32B4187D200A2BB99 /* CampaignModel.swift */,
+				450FB6B02B4828160071F76A /* WalletModel.swift */,
+				450FB6B22B4832AB0071F76A /* StatsModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -329,14 +341,18 @@
 				4534EF8A2B3F50E300FE1DDC /* CustomTab.swift in Sources */,
 				458C53052B3BF7980009393F /* CustomButtonStyle.swift in Sources */,
 				458C52D32B3BEACC0009393F /* RiseNativeApp.swift in Sources */,
+				450FB6B12B4828160071F76A /* WalletModel.swift in Sources */,
 				4534EF922B3F6D2600FE1DDC /* FeedView.swift in Sources */,
 				456B1F382B3CA2E0004DC523 /* OnboardingView.swift in Sources */,
 				4534EF982B3F858B00FE1DDC /* Data.swift in Sources */,
 				4524288A2B4483BA00CC4381 /* BalanceCardView.swift in Sources */,
 				45D4EDD22B3EB21500E098AA /* Api.swift in Sources */,
+				450FB6B52B4896B40071F76A /* SkeletonLoaderView.swift in Sources */,
 				4534EF8C2B3F514400FE1DDC /* Home.swift in Sources */,
 				458C52E22B3BF1A60009393F /* Color.swift in Sources */,
 				45BE5A482B40948D00EB3457 /* AuthModel.swift in Sources */,
+				450FB6AF2B46D6C90071F76A /* constants.swift in Sources */,
+				450FB6B32B4832AB0071F76A /* StatsModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

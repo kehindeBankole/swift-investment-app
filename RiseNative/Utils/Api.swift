@@ -24,7 +24,7 @@ enum MyError: Error {
 }
 
 
-func makeApiCall<T>(endpoint: String, method: HTTPMethod, body: [String: Any]? = nil) async throws -> T? where T : Decodable {
+func makeApiCall<T : Decodable>(endpoint: String, method: HTTPMethod, body: [String: Any]? = nil) async throws -> T?  {
     @AppStorage("token") var token: String = ""
     if let url = URL(string:  endpoint) {
         var request = URLRequest(url: url)
@@ -36,7 +36,7 @@ func makeApiCall<T>(endpoint: String, method: HTTPMethod, body: [String: Any]? =
         }
         
         let (data, response) = try await URLSession.shared.data(for: request)
-        
+
         guard let response = response as? HTTPURLResponse , response.statusCode != 401 else {
             throw MyError.UnAuthorized
         }
@@ -44,6 +44,7 @@ func makeApiCall<T>(endpoint: String, method: HTTPMethod, body: [String: Any]? =
         do{
             let decodedData = try JSONDecoder().decode(T.self, from: data)
           //  print("response", token , response,  decodedData )
+           // print("data" , decodedData)
             return decodedData
         } catch {
             

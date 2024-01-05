@@ -16,9 +16,9 @@ struct ShadowModifier: ViewModifier {
     }
 }
 
-
 struct BalanceCard:View{
     @State var showBalance = false
+    @State var stats:StatsModel
     var body: some View{
         Rectangle()
         
@@ -45,7 +45,7 @@ struct BalanceCard:View{
                     }.padding(.bottom , 2)
                     
                     
-                    Text("$9,824.43")
+                    Text(stats.data.totalBalance , format:.currency(code: Locale.current.currency?.identifier ?? "USD"))
                         .font(.custom("TomatoGrotesk-Regular", size: 32))
                         .multilineTextAlignment(.center)
                         .foregroundColor(Color(red: 0.2, green: 0.2, blue: 0.2))
@@ -61,11 +61,10 @@ struct BalanceCard:View{
                         
                         Group{
                             
-                            Image(systemName: "arrow.up.right")
+                            Image(systemName: "arrow.up.right").font(.system(size: 13))
                             
                             
-                            Text("12.82%")
-                                .font(.custom("TomatoGrotesk-Regular", size: 16))
+                            Text("\(stats.data.percentageChange.formatted(.number.precision(.fractionLength(2))))%")                                .font(.custom("TomatoGrotesk-Regular", size: 16))
                                 .multilineTextAlignment(.center)
                             
                         }.foregroundColor(Color(red: 0.15, green: 0.75, blue: 0.25))
@@ -79,6 +78,8 @@ struct BalanceCard:View{
 
 struct InvestingBalanceCard:View{
     @State var showBalance = false
+    @State var stats:StatsModel
+    
     var body: some View{
         Rectangle()
         
@@ -105,7 +106,7 @@ struct InvestingBalanceCard:View{
                     }.padding(.bottom , 2)
                     
                     
-                    Text("$9,824.43")
+                    Text(stats.data.investmentBalance , format:.currency(code: Locale.current.currency?.identifier ?? "USD"))
                         .font(.custom("TomatoGrotesk-Regular", size: 32))
                         .multilineTextAlignment(.center)
                         .foregroundColor(Color(red: 0.2, green: 0.2, blue: 0.2))
@@ -114,17 +115,17 @@ struct InvestingBalanceCard:View{
                     
                     HStack{
                         
-                        Text("Total Gains ")
+                        Text("Total Gains")
                             .font(Font.custom("DMSans-Regular", size: 15))
                             .multilineTextAlignment(.center)
                             .foregroundColor(Color.riseTextSoft)
                         
                         Group{
                             
-                            Image(systemName: "arrow.up.right")
+                           Image(systemName: "arrow.up.right").font(.system(size: 13))
                             
                             
-                            Text("12.82%")
+                            Text("\(stats.data.percentageChange.formatted(.number.precision(.fractionLength(2))))%")
                                 .font(.custom("TomatoGrotesk-Regular", size: 16))
                                 .multilineTextAlignment(.center)
                             
@@ -140,6 +141,7 @@ struct InvestingBalanceCard:View{
 struct WalletBalanceCard:View{
     @State var showBalance = false
     @Binding var currentTab:Tabs
+    @State var wallet:WalletModel
     
     var body: some View{
         Rectangle()
@@ -167,7 +169,8 @@ struct WalletBalanceCard:View{
                     }.padding(.bottom , 2)
                     
                     
-                    Text("$9,824.43")
+   
+                    Text(wallet.data.wallet.balance , format:.currency(code: Locale.current.currency?.identifier ?? "USD"))
                         .font(.custom("TomatoGrotesk-Regular", size: 32))
                         .multilineTextAlignment(.center)
                         .foregroundColor(Color(red: 0.2, green: 0.2, blue: 0.2))
@@ -194,27 +197,65 @@ struct WalletBalanceCard:View{
 struct BalanceCardView: View {
     @State var currentView = 1
     @Binding var currentTab:Tabs
+    @State var isLoading = false
+    @Environment(AppData.self) private var appData
+    
     var body: some View {
         VStack{
-            
-            TabView(selection: $currentView,
-                    content:  {
-                BalanceCard().tag(1)
-                InvestingBalanceCard().tag(2)
-                WalletBalanceCard(currentTab: $currentTab).tag(3)
+            if(isLoading){
+                SkeletonLoaderView()
+                    .frame(maxWidth : .infinity)
+                 .frame( height: 192)
+            }else{
+                TabView(selection: $currentView,
+                        content:  {
+                    if(appData.stats != nil){
+                        BalanceCard(stats: appData.stats!).tag(1)
+                        InvestingBalanceCard(stats: appData.stats!).tag(2)
+                    }
+                    if(appData.wallet != nil){
+                        WalletBalanceCard(currentTab: $currentTab , wallet : appData.wallet!).tag(3)
+                    }
+           
+                    
+                }).tabViewStyle(PageTabViewStyle(indexDisplayMode: .never)).cornerRadius(20)
                 
-            }).tabViewStyle(PageTabViewStyle(indexDisplayMode: .never)).cornerRadius(20)
-            HStack{
-                ForEach( 0 ..< 3 , id:\.self){index  in
-                    let isActive = index == currentView - 1
-                    Rectangle().fill(isActive ? Color.riseActiveCard : Color.textSoft).opacity(isActive ? 1 : 0.2).frame(width: index == currentView-1 ? 12 : 5 , height: 5).cornerRadius(20).animation(.default, value: isActive)
+                   HStack{
+                       ForEach( 0 ..< 3 , id:\.self){index  in
+                           let isActive = index == currentView - 1
+                           Rectangle().fill(isActive ? Color.riseActiveCard : Color.textSoft).opacity(isActive ? 1 : 0.2).frame(width: index == currentView-1 ? 12 : 5 , height: 5).cornerRadius(20).animation(.default, value: isActive)
+                       }
+                   }
+            }
+          
+               
+       
+        }.task {
+            if(appData.wallet == nil){
+                do{
+                    let data : WalletModel? =  try await makeApiCall(endpoint: baseUrl + "/users/\(String(describing: appData.profile?.id))/get-wallet", method: .get)
+                    if let walletData = data{
+                        appData.wallet = walletData
+                        print("wallet" , walletData)
+                    }
+                }catch{
+                    print("error wallet" , error)
+                }
+            }
+        }.task {
+            if(appData.stats == nil){
+                do{
+                    isLoading = true
+                    let data : StatsModel? =  try await makeApiCall(endpoint: baseUrl + "/auth/stats", method: .get)
+                    if let statsData = data{
+                        appData.stats = statsData
+                    }
+                    isLoading = false
+                }catch{
+                    print("error stats" , error)
                 }
             }
         }
     }
 }
 
-#Preview {
-    BalanceCardView(currentTab: .constant(.home))
-//    Home()
-}
