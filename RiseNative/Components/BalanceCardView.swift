@@ -247,8 +247,13 @@ struct BalanceCardView: View {
              
             }
         }.task {
-            if(appData.wallet == nil){
+      
                 do{
+                    if(appData.stats == nil){
+                        isLoading = true
+                    }
+                        
+                 
                     let data : WalletModel? =  try await makeApiCall(endpoint: baseUrl + "/users/\(String(describing: appData.profile?.id))/get-wallet", method: .get)
                     if let walletData = data{
                         appData.wallet = walletData
@@ -256,11 +261,15 @@ struct BalanceCardView: View {
                 }catch{
               
                 }
-            }
+        
         }.task {
-            if(appData.stats == nil){
+         
                 do{
-                    isLoading = true
+                    if(appData.stats == nil){
+                        isLoading = true
+                    }
+                        
+                 
                     let data : StatsModel? =  try await makeApiCall(endpoint: baseUrl + "/auth/stats", method: .get)
                     if let statsData = data{
                         appData.stats = statsData
@@ -269,7 +278,7 @@ struct BalanceCardView: View {
                 }catch{
                  
                 }
-            }
+
         }
     }
 }

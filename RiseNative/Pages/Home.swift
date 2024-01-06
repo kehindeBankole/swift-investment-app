@@ -37,7 +37,7 @@ struct Home: View {
     }
     
     var body: some View {
-        ScrollView{
+        ScrollView(showsIndicators: false){
             VStack(spacing: 20){
                 HStack{
                     VStack(alignment: .leading , spacing: 5){
@@ -107,8 +107,11 @@ struct Home: View {
                 .background(Color.riseTextSoft.opacity(0.1))
                 .cornerRadius(12)
                 
-                
-                Spacer()
+                CreatePlanView()
+                CustomerCornerView()
+                QuotesView().padding(.top , 10)
+                Image("rise").renderingMode(.template).resizable().scaledToFit().frame(width: 80 , height: 24).foregroundStyle(Color.riseTextSoft.opacity(0.2))
+
             }.padding().onAppear(){
                 getTimeOfDay()
             }

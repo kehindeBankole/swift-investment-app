@@ -32,7 +32,6 @@ struct CampaignImageView: View {
                                                    .padding(10)
                                                    .background(Color.riseTextNeutral)
                                                    .cornerRadius(100)
-//                                    Image(systemName: "xmark").foregroundColor(.white)
                                 })
                                 Spacer()
              
