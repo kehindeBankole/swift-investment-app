@@ -39,7 +39,6 @@ struct LoginView: View {
                 token =  data!.token!
                 appData.isAuthenticated = true
                 appData.path.append("layout")
-                print(appData.path)
             }
             isLogginIn = false
         }catch{

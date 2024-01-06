@@ -20,5 +20,128 @@
             landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "59249D69-4C0C-49D5-95C6-14559FE8A305"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RiseNative/Components/CustomTab.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "59249D69-4C0C-49D5-95C6-14559FE8A305 - 93620f96ed04d2f1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor @Sendable () -&gt; () in closure #2 @Sendable () async -&gt; () in RiseNative.CustomTab.body.getter : some"
+                  moduleName = "RiseNative"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kehinde/Desktop/kehinde/RiseNative/RiseNative/Components/CustomTab.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "84"
+                  endingLineNumber = "84"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  uuid = "59249D69-4C0C-49D5-95C6-14559FE8A305 - 912f9c027294cf97"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #3 @Sendable () async -&gt; () in RiseNative.CustomTab.body.getter : some"
+                  moduleName = "RiseNative"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kehinde/Desktop/kehinde/RiseNative/RiseNative/Components/CustomTab.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "99"
+                  endingLineNumber = "99"
+                  offsetFromSymbolStart = "812">
+               </Location>
+               <Location
+                  uuid = "59249D69-4C0C-49D5-95C6-14559FE8A305 - 28bf591bac3911e8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for closure #3 @Sendable () async -&gt; () in RiseNative.CustomTab.body.getter : some"
+                  moduleName = "RiseNative"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kehinde/Desktop/kehinde/RiseNative/RiseNative/Components/CustomTab.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "99"
+                  endingLineNumber = "99"
+                  offsetFromSymbolStart = "128">
+               </Location>
+               <Location
+                  uuid = "59249D69-4C0C-49D5-95C6-14559FE8A305 - 95dbeb8edfbdee96"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for closure #2 @Sendable () async -&gt; () in RiseNative.CustomTab.body.getter : some"
+                  moduleName = "RiseNative"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kehinde/Desktop/kehinde/RiseNative/RiseNative/Components/CustomTab.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "68"
+                  endingLineNumber = "68"
+                  offsetFromSymbolStart = "280">
+               </Location>
+               <Location
+                  uuid = "59249D69-4C0C-49D5-95C6-14559FE8A305 - c32080ef385431cb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RiseNative.CustomTab.body.getter : some"
+                  moduleName = "RiseNative"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kehinde/Desktop/kehinde/RiseNative/RiseNative/Components/CustomTab.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "1328">
+               </Location>
+               <Location
+                  uuid = "59249D69-4C0C-49D5-95C6-14559FE8A305 - 6b9f5a471423c7c8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.ForEach&lt;Swift.Array&lt;RiseNative.Tabs&gt;, Swift.String, SwiftUI.TupleView&lt;(SwiftUI.Spacer, &lt;&lt;opaque return type of SwiftUI.View.disabled(Swift.Bool) -&gt; some&gt;&gt;.0)&gt;&gt; in RiseNative.CustomTab.body.getter : some"
+                  moduleName = "RiseNative"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kehinde/Desktop/kehinde/RiseNative/RiseNative/Components/CustomTab.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "492">
+               </Location>
+               <Location
+                  uuid = "59249D69-4C0C-49D5-95C6-14559FE8A305 - 40f2f847ffc15d39"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; () in RiseNative.CustomTab.body.getter : some"
+                  moduleName = "RiseNative"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kehinde/Desktop/kehinde/RiseNative/RiseNative/Components/CustomTab.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "156">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

@@ -50,23 +50,27 @@ struct CustomTab: View {
                 }).disabled(isCurrentTab)
                 
             })
-        }.padding(.horizontal , 20).task(priority: .high) {
-            
-            do{
+        }.padding(.horizontal , 20)
+            .task(priority: .high) {
                 
-                let data : Profile? =   try await makeApiCall(endpoint: baseUrl + "/auth/profile", method: .get)
-        
-                if let profile = data {
-                    appData.profile = profile
-                }
-            
-            }catch {
-                switch(error){
-                case MyError.UnAuthorized:
-                    appData.path.append("layout")
-                    print(appData.path)
-                default:
-                    print("ks")
+                do{
+                    let data : Profile? = try await makeApiCall(endpoint: baseUrl + "/auth/profile", method: .get)
+                    
+                    if let profile = data {
+                        appData.profile = profile
+                    }
+                    
+                    
+                } catch {
+                    
+                    switch error {
+                       
+                    case MyError.UnAuthorized:
+                        
+                        print("Unauthorized error occurred:", error)
+                    default:
+                        print("Other error:", error)
+                    }
                 }
             }
         }

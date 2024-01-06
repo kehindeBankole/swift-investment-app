@@ -22,7 +22,7 @@ struct ImageCampaignView : View {
                     })
   
             }.padding(0).onTapGesture {
-                appData.path.append(campaign)
+              //  appData.path.append(campaign)
             }
  
     }
