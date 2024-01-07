@@ -42,10 +42,9 @@ struct BalanceCard:View{
                         }.font(Font.custom("DMSans-Regular", size: 15))
                             .foregroundColor(Color.riseTextSoft)
                     }.padding(.bottom , 2)
-                    
-                    
+    
                     if(appData.showBalance){
-                        Text(appData.stats!.data.totalBalance , format:.currency(code: "USD"))
+                        Text(getFormattedCurrency(value:appData.stats!.data.totalBalance))
                             .font(.custom("TomatoGrotesk-Regular", size: 32))
                             .multilineTextAlignment(.center)
                             .foregroundColor(Color(red: 0.2, green: 0.2, blue: 0.2))
@@ -108,7 +107,7 @@ struct InvestingBalanceCard:View{
                     
                     
                     if(appData.showBalance){
-                        Text(appData.stats!.data.investmentBalance , format:.currency(code : "USD"))
+                        Text(getFormattedCurrency(value:appData.stats!.data.investmentBalance))
                             .font(.custom("TomatoGrotesk-Regular", size: 32))
                             .multilineTextAlignment(.center)
                             .foregroundColor(Color(red: 0.2, green: 0.2, blue: 0.2))
@@ -174,7 +173,7 @@ struct WalletBalanceCard:View{
                     
    
                     if(appData.showBalance){
-                        Text(appData.wallet!.data.wallet.balance , format:.currency(code : "USD")).font(.custom("TomatoGrotesk-Regular", size: 32))
+                        Text(getFormattedCurrency(value:appData.wallet!.data.wallet.balance)).font(.custom("TomatoGrotesk-Regular", size: 32))
                             .multilineTextAlignment(.center)
                             .foregroundColor(Color(red: 0.2, green: 0.2, blue: 0.2))
                     }else{
