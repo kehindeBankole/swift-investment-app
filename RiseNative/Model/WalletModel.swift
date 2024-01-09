@@ -8,14 +8,14 @@
 import Foundation
 
 
-struct WalletModel : Codable{
+struct WalletModel : Decodable {
     let data : WalletData
 }
-struct WalletData: Codable {
+struct WalletData: Decodable {
     var wallet: Wallet
 }
 
-struct Wallet: Codable {
+struct Wallet: Decodable {
     var balance: Double
 }
 

@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct QuotesModel : Codable {
+struct QuotesModel : Decodable {
     let quote: String
     let author : String
 }

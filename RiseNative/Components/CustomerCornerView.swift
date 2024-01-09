@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct CustomerCornerView: View {
+    @Environment(AppData.self) private var appData
+    
     var body: some View {
         VStack{
    
@@ -47,30 +49,37 @@ struct CustomerCornerView: View {
             
             Divider()
             
-            HStack(alignment: .center, spacing: 20) {
-                HStack(spacing:15){
-                    Image(systemName: "play.fill").foregroundStyle(.white)
-                    .frame(width: 40, height: 40)
-                    .background(Color.riseTeal)
-                    .cornerRadius(100)
-                    VStack{
-                
-                        Text("Rise Onboarding Series")
-                          .font(Font.custom("DMSans-Regular", size: 17))
-                          .foregroundColor(Color(red: 0.2, green: 0.2, blue: 0.2))
-                          .frame(maxWidth: .infinity, alignment: .topLeading)
+            HStack{
+                Button(action: {
+                    appData.path.append("onboard-video")
+                }){
+                    HStack(alignment: .firstTextBaseline, spacing: 20) {
+                        HStack(spacing:15){
+                            Image(systemName: "play.fill").foregroundStyle(.white)
+                            .frame(width: 40, height: 40)
+                            .background(Color.riseTeal)
+                            .cornerRadius(100)
+                            VStack{
                         
-                     
-                        Text("Watch our onboarding videos to get started")
-                          .font(Font.custom("DMSans-Regular", size: 15))
-                          .foregroundColor(Color.riseTextSoft)
-                          .frame(maxWidth: .infinity, alignment: .topLeading)
+                                Text("Rise Onboarding Series")
+                                  .font(Font.custom("DMSans-Regular", size: 17))
+                                  .foregroundColor(Color(red: 0.2, green: 0.2, blue: 0.2))
+                                  .frame(maxWidth: .infinity, alignment: .topLeading)
+                                
+                             
+                                Text("Watch our onboarding videos to get started")
+                                  .font(Font.custom("DMSans-Regular", size: 15))
+                                  .foregroundColor(Color.riseTextSoft)
+                                  .frame(maxWidth: .infinity, alignment: .leading)
+                                  .multilineTextAlignment(.leading)
+                                
+                            }
+                        }
+                        Spacer()
                         
+                        Image("arrowLeft").resizable().scaledToFit().frame(width: 8 , height: 14)
                     }
                 }
-                Spacer()
-                
-                Image("arrowLeft").resizable().scaledToFit().frame(width: 8 , height: 14)
             }
             .padding(.vertical , 15)
             .frame(maxWidth: .infinity, alignment: .leading)
@@ -78,8 +87,4 @@ struct CustomerCornerView: View {
             Divider()
         }
     }
-}
-
-#Preview {
-    CustomerCornerView()
 }

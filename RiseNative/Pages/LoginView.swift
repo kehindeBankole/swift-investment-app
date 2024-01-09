@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct LoginView: View {
-    @State private var email = ""
+    @State private var email = "bankolek1@gmail.com"
     @State var showPassword = false
-    @State private var password = ""
+    @State private var password = "Ayinke2013#"
     @State private var primaryButton:ButtonType = .primary
     @FocusState private var passFieldIsFocused: Bool
     @FocusState private var emailFieldIsFocused: Bool
@@ -148,6 +148,9 @@ struct LoginView: View {
             }.navigationDestination(for:String.self){data in
                 if(data=="layout"){
                     LayoutView()
+                }
+                if(data == "onboard-video"){
+                    OnboardingVideosView()
                 }
             }.navigationDestination(for:CampaignModel.self){data in
               CampaignImageView(campaign: data)

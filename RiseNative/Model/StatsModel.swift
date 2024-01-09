@@ -8,11 +8,11 @@
 import Foundation
 
 
-struct StatsModel : Codable{
+struct StatsModel : Decodable {
     let data : Stats
 }
 
-struct Stats: Codable {
+struct Stats: Decodable {
     var investmentBalance : Double
     var totalBalance : Double
     var percentageChange : Double

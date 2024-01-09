@@ -49,7 +49,7 @@ struct BalanceCard:View{
                             .multilineTextAlignment(.center)
                             .foregroundColor(Color(red: 0.2, green: 0.2, blue: 0.2))
                     }else{
-                        Text("***").font(.custom("TomatoGrotesk-Regular", size: 32))
+                        Text("******").font(.custom("TomatoGrotesk-Regular", size: 32))
                     }
                     
                     Divider().frame(width: 200).padding(.bottom)
@@ -112,7 +112,7 @@ struct InvestingBalanceCard:View{
                             .multilineTextAlignment(.center)
                             .foregroundColor(Color(red: 0.2, green: 0.2, blue: 0.2))
                     }else{
-                        Text("***").font(.custom("TomatoGrotesk-Regular", size: 32))
+                        Text("******").font(.custom("TomatoGrotesk-Regular", size: 32))
                     }
                     
                     Divider().frame(width: 200).padding(.bottom)
@@ -177,7 +177,7 @@ struct WalletBalanceCard:View{
                             .multilineTextAlignment(.center)
                             .foregroundColor(Color(red: 0.2, green: 0.2, blue: 0.2))
                     }else{
-                        Text("***").font(.custom("TomatoGrotesk-Regular", size: 32))
+                        Text("******").font(.custom("TomatoGrotesk-Regular", size: 32))
                     }
                      
                     
