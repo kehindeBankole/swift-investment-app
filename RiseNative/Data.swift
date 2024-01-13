@@ -17,4 +17,5 @@ import SwiftUI
     var wallet : WalletModel? = nil
     var stats : StatsModel? = nil
     var showBalance = false
+    var plan : PlanModel? = nil
 }

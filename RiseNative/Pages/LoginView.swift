@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct LoginView: View {
-    @State private var email = "bankolek1@gmail.com"
+    @State private var email = ""
     @State var showPassword = false
-    @State private var password = "Ayinke2013#"
+    @State private var password = ""
     @State private var primaryButton:ButtonType = .primary
     @FocusState private var passFieldIsFocused: Bool
     @FocusState private var emailFieldIsFocused: Bool
