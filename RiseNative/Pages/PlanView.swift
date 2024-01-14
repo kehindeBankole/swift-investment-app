@@ -31,14 +31,23 @@ struct PlanView: View {
                         ForEach(PlanTabs.allCases , id :\.rawValue){item in
                             Spacer()
                             VStack{
-                                Text(item.rawValue)
-                                    .font(
-                                        Font.custom("DMSans-Bold", size: 17)
-                                    )
-                                    .frame(maxWidth : .infinity)
-                                    .multilineTextAlignment(.center)
-                                    .foregroundStyle(item.rawValue == currentTab.rawValue ? Color.riseTeal : Color.riseTextSoft)
-                            }
+                                Button(action: {
+                                    if(currentTab == .plans){
+                                        currentTab = .portfolio
+                                    }else{
+                                        currentTab = .plans
+                                    }
+                                }){
+                                    Text(item.rawValue)
+                                        .font(
+                                            Font.custom("DMSans-Bold", size: 17)
+                                        )
+                                        .frame(maxWidth : .infinity)
+                                        .multilineTextAlignment(.center)
+                                        .foregroundStyle(item.rawValue == currentTab.rawValue ? Color.riseTeal : Color.riseTextSoft)
+                               
+                                }
+                               }
                             Spacer()
                         }
                     }.background(
