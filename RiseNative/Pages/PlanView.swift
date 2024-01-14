@@ -24,28 +24,35 @@ struct PlanView: View {
                     ).multilineTextAlignment(.leading)
                     .foregroundStyle(.black).padding()
                 
-                HStack{
-                    ForEach(PlanTabs.allCases , id :\.rawValue){item in
-                        Spacer()
-                        VStack{
-                            Text(item.rawValue)
-                                .font(
-                                    Font.custom("DMSans-Bold", size: 17)
-                                )
-                                .multilineTextAlignment(.center)
-                                .foregroundStyle(item.rawValue == currentTab.rawValue ? Color.riseTeal : Color.riseTextSoft)
-
-                                Rectangle()
-                                  .foregroundColor(.clear)
-                                  .frame(width: 42, height: 2.17559)
-                                  .background(Color.riseTeal)
-                                  .cornerRadius(9)
-                                  .opacity(item.rawValue == currentTab.rawValue ? 1.0 : 0.0)
-                                  .animation(.default, value: item.rawValue == currentTab.rawValue)
+                GeometryReader{ proxy in
+                    let width = proxy.size.width
+                    let height = proxy.size.height
+                    HStack{
+                        ForEach(PlanTabs.allCases , id :\.rawValue){item in
+                            Spacer()
+                            VStack{
+                                Text(item.rawValue)
+                                    .font(
+                                        Font.custom("DMSans-Bold", size: 17)
+                                    )
+                                    .frame(maxWidth : .infinity)
+                                    .multilineTextAlignment(.center)
+                                    .foregroundStyle(item.rawValue == currentTab.rawValue ? Color.riseTeal : Color.riseTextSoft)
+                            }
+                            Spacer()
                         }
-                        Spacer()
-                    }
-                }
+                    }.background(
+                        Rectangle()
+                            .foregroundColor(.clear)
+                            .frame(width: 42, height: 2.17559)
+                            .background(Color.riseTeal)
+                            .cornerRadius(9)
+                            .offset(x: currentTab == .plans ? -(width / 4)  : width / 4 , y : height - 12 )
+                            .animation(.default, value: currentTab == .plans)
+                        
+                    )
+                }.frame(height: 40)
+                
             }
             .padding(.horizontal, 10)
             .padding(.bottom, 0)
