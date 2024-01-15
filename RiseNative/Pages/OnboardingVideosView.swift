@@ -66,7 +66,7 @@ struct OnboardingVideosView: View {
                         }.padding()
                     }else{
                             ForEach(Array(videos!.enumerated()) , id:\.element.url){index, video in
-                                LazyVStack{
+                                VStack{
                                     Button(action: {
                                         currentVideo = index
                                     }, label: {

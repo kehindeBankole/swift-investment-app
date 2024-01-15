@@ -56,6 +56,8 @@ struct PlanView: View {
                             .frame(width: 42, height: 2.17559)
                             .background(Color.riseTeal)
                             .cornerRadius(9)
+                        //dividing by 4 because of spacer added before and after elements
+                        // subtracting 12 from height because of bottom padding value
                             .offset(x: currentTab == .plans ? -(width / 4)  : width / 4 , y : height - 12 )
                             .animation(.default, value: currentTab == .plans)
                         
